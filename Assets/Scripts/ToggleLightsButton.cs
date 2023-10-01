@@ -11,8 +11,8 @@ public class ToggleLightsButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void OnToggleClick()
     {
-        
+        Debug.Log("Toggle button clicked");
     }
 }
