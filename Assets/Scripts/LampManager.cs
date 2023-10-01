@@ -22,6 +22,7 @@ public class LampManager : MonoBehaviour
             Debug.Log(gameObjects);
         }
     }
+
     public void ToggleClick()
     {
         Light lightComponent = gameObjects[currentIndex].GetComponentInChildren<Light>();
@@ -29,8 +30,12 @@ public class LampManager : MonoBehaviour
         {
             lightComponent.enabled = !lightComponent.enabled;
 
-            currentIndex = (currentIndex + 1) % gameObjects.Length;
+            if (currentIndex == gameObjects.Length - 1)
+                currentIndex = 0;
+            else
+                currentIndex++;
         }
     }
+
 
 }
