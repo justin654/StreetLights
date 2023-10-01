@@ -252,9 +252,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 203950654}
-        m_TargetAssemblyTypeName: ToggleLightsButton, Assembly-CSharp
-        m_MethodName: OnToggleClick
+      - m_Target: {fileID: 175203078}
+        m_TargetAssemblyTypeName: LampManager, Assembly-CSharp
+        m_MethodName: ToggleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
