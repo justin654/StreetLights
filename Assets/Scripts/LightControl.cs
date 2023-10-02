@@ -13,6 +13,11 @@ public class LightControl : MonoBehaviour
         SetLight(initalLightSetting);
     }
 
+    public bool IsLightOn()
+    {
+        return lampLight.enabled;
+    }
+
     public void SetLight(bool lightvalue)
     {
         lampLight.enabled = lightvalue;
