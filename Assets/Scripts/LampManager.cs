@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class LampManager : MonoBehaviour
 {
-    [SerializeField] string typeName = "Lamp";
+    [SerializeField] public string typeName = "Lamp";
     private GameObject[] gameObjects;
+    public LightControl lightControl;
     private int currentIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObjects = GameObject.FindGameObjectsWithTag(typeName);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        foreach (GameObject go in gameObjects)
+        if (gameObjects.Length == 0)
         {
-            Debug.Log(gameObjects);
+            Debug.LogWarning("Nothing found with Lamp tag");
         }
     }
 
-    public void ToggleClick()
+    public void ToggleLamps()
     {
-        Light lightComponent = gameObjects[currentIndex].GetComponentInChildren<Light>();
-        if (lightComponent != null)
+        if (gameObjects.Length == 0)
         {
-            lightComponent.enabled = !lightComponent.enabled;
-
-            if (currentIndex == gameObjects.Length - 1)
-                currentIndex = 0;
-            else
-                currentIndex++;
+            Debug.LogWarning("No lamps to toggle");
+            return;
         }
+
+        if (currentIndex >= gameObjects.Length)
+        {
+            currentIndex = 0;
+        }
+
+        GameObject obj = gameObjects[currentIndex];
+        LightControl lightControl = obj.GetComponent<LightControl>();
+        if (lightControl != null)
+        {
+            Debug.Log("Toggling light for: " + obj.name);
+            lightControl.ToggleLight();
+        }
+
+        currentIndex++;
     }
 }

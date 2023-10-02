@@ -116,6 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4397987974031624985}
+  - component: {fileID: -4200722173512493670}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Lamp
@@ -142,6 +143,20 @@ Transform:
   - {fileID: 3895354856964931993}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4200722173512493670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569089925869972073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad2b3c37a3b839469bd7113aeea9539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initalLightSetting: 0
+  lampLight: {fileID: 0}
 --- !u!1 &4371939888349053989
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3895354856964931993}
   - component: {fileID: 4080894306159263969}
-  - component: {fileID: 8408439758200604091}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -397,8 +411,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.9479667, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 3
+  m_Intensity: 2
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -447,16 +461,3 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &8408439758200604091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8771702390296919837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad2b3c37a3b839469bd7113aeea9539, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initalLightSetting: 0
