@@ -1,0 +1,11 @@
+Before make anything,make sure you have this snap settings(Edit>Snap settings):
+X = 2
+Y = 1
+Z = 2
+Scale = 0.1
+Rotation = 90
+
+Tips for building:
+Drag&Drop your model\prefab in the 'Hierarchy' menu,this will placed your object in center of scene with perfectly zero coordinates!
+When you do any manipulation with object(move/rotation),hold "Ctrl" to use 'Grid snapping'.
+
