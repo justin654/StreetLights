@@ -55,7 +55,7 @@ public class LampManager : MonoBehaviour
         foreach (var obj in gameObjects)
         {
             LightControl lightControl = obj.GetComponent<LightControl>();
-            if (lightControl != null && lightControl.IsLightOn())
+            if (lightControl != null && lightControl.AreAnyLightsOn()) //Update to AreAnyLightsOn instead of the previous as it's changed in LightControl
             {
                 count++;
             }
