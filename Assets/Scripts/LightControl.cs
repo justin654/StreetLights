@@ -18,11 +18,6 @@ public class LightControl : MonoBehaviour
         return lampLight.enabled;
     }
 
-    public void SetLight(bool lightvalue)
-    {
-        lampLight.enabled = lightvalue;
-    }
-
     public void ToggleLight()
     {
         lampLight.enabled = !lampLight.enabled;
